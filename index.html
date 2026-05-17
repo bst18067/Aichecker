@@ -4,43 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GradeA+ | 香港大專生 Turnitin & AI 率專業代查</title>
-    <!-- Tailwind CSS -->
+    <!-- 引入 Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome 圖標 -->
+    <!-- 引入 FontAwesome 圖標 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google 字體 -->
+    <!-- 引入 Google 字體 -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Noto Sans HK', sans-serif;
         }
-        /* 載入中骨架屏動畫 */
-        @keyframes pulse-light {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.6; }
-        }
-        .data-loading {
-            animation: pulse-light 1.5s infinite ease-in-out;
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 4px;
-            display: inline-block;
-        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
-
-    <!-- 頂部 Sheets 狀態通知條 -->
-    <div id="status-bar" class="bg-slate-900 text-slate-400 text-xs py-2 px-4 border-b border-slate-800 transition-all duration-500">
-        <div class="max-w-4xl mx-auto flex justify-between items-center">
-            <span class="flex items-center">
-                <span id="status-dot" class="w-2.5 h-2.5 rounded-full bg-amber-500 mr-2 animate-pulse"></span>
-                <span id="status-text">正在加載 Google Sheets 設定...</span>
-            </span>
-            <button onclick="toggleConfigGuide()" class="text-blue-400 hover:text-blue-300 underline font-medium focus:outline-none">
-                <i class="fas fa-cog mr-1"></i>後台設定教學
-            </button>
-        </div>
-    </div>
 
     <!-- Header 導航欄 -->
     <header class="bg-white/85 backdrop-blur-md shadow-sm sticky top-0 z-40 transition-all">
@@ -49,7 +25,7 @@
                 <span data-key="brand_name" class="text-2xl font-black text-blue-600 tracking-tight">GradeA+</span>
                 <span data-key="nav_badge" class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded">大專生自查</span>
             </div>
-            <a data-wa-link href="https://wa.me/85291234567?text=你好，我想查Assignment，一齊要AI份同查重份報告。" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold px-4 py-2 rounded-full text-sm flex items-center shadow-md transition duration-300">
+            <a data-wa-link href="#" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold px-4 py-2 rounded-full text-sm flex items-center shadow-md transition duration-300">
                 <i class="fab fa-whatsapp mr-1.5 text-base"></i> <span data-key="nav_btn_text">WhatsApp 傳檔</span>
             </a>
         </div>
@@ -88,7 +64,7 @@
             </div>
 
             <div class="mt-8">
-                <a data-wa-link href="https://wa.me/85291234567?text=你好，我想查Assignment，一齊要AI份同查重份報告。" target="_blank" class="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-black px-10 py-4.5 rounded-2xl shadow-lg shadow-green-950/20 transition duration-300 text-lg md:text-xl w-full sm:w-auto transform hover:-translate-y-0.5">
+                <a data-wa-link href="#" target="_blank" class="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-black px-10 py-4.5 rounded-2xl shadow-lg shadow-green-950/20 transition duration-300 text-lg md:text-xl w-full sm:w-auto transform hover:-translate-y-0.5">
                     <i class="fab fa-whatsapp mr-3 text-2xl"></i> <span data-key="cta_btn_text">WhatsApp 即時傳檔查核</span>
                 </a>
             </div>
@@ -112,7 +88,7 @@
                     <i class="fas fa-shield-alt"></i>
                 </div>
                 <h3 data-key="card1_title" class="font-bold text-base mb-2 text-slate-900">安全不錄入 (No Repository)</h3>
-                <p data-key="card1_desc" class="text-slate-500 text-xs leading-relaxed">使用教師高級帳戶查核，**絕不收錄**進資料庫。你正式交比學校果陣，絕對唔會變成 100% 重複。</p>
+                <p data-key="card1_desc" class="text-slate-500 text-xs leading-relaxed">使用教師高級帳戶查核，絕不收錄進資料庫。你正式交比學校果陣，絕對唔會變成 100% 重複。</p>
             </div>
             <!-- 卡片 2 -->
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 transition-all hover:shadow-md">
@@ -170,71 +146,13 @@
     </footer>
 
     <!-- 右下角懸浮 WhatsApp 按鈕 -->
-    <a data-wa-link href="https://wa.me/85291234567?text=你好，我想查Assignment，一齊要AI份同查重份報告。" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition duration-300 transform hover:scale-110 z-30">
-        <i class="fab fa-whatsapp text-3.5xl"></i>
+    <a data-wa-link href="#" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition duration-300 transform hover:scale-110 z-30">
+        <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 
-    <!-- ==================== 後台控制中心 (可摺疊/隱藏) ==================== -->
-    <div id="config-guide" class="fixed bottom-0 left-0 right-0 bg-slate-900 text-white border-t-2 border-blue-500 p-6 z-50 transform translate-y-full transition-transform duration-500 max-h-[85vh] overflow-y-auto shadow-2xl">
-        <div class="max-w-4xl mx-auto">
-            <div class="flex justify-between items-center pb-4 border-b border-slate-800">
-                <h3 class="text-lg font-bold text-blue-400 flex items-center">
-                    <i class="fas fa-tools mr-2 text-xl"></i> 實時後台控制面板 (Google Sheets 連結設定)
-                </h3>
-                <button onclick="toggleConfigGuide()" class="text-slate-400 hover:text-white text-xl p-2 focus:outline-none">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-
-            <!-- 輸入連結欄位 -->
-            <div class="mt-4 bg-slate-950 p-4 rounded-xl border border-slate-800">
-                <label class="block text-sm font-semibold text-slate-300 mb-2">請貼上你的 Google 試算表 CSV 發布網址：</label>
-                <div class="flex flex-col md:flex-row gap-2">
-                    <input type="text" id="sheets-url-input" placeholder="https://docs.google.com/spreadsheets/d/e/2PACX-.../pub?output=csv" class="flex-1 px-4 py-2.5 bg-slate-900 border border-slate-700 rounded-lg text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <button onclick="saveAndApplyUrl()" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all">
-                        儲存並實時套用
-                    </button>
-                </div>
-                <p class="text-slate-500 text-xs mt-2 leading-relaxed">
-                    * 網址格式必須為 <code class="text-amber-400">output=csv</code> 結尾的公開網址。設定好後，我們將此網址儲存於你的瀏覽器（LocalStorage），每次載入都會自動動態同步。
-                </p>
-            </div>
-
-            <!-- 使用說明 -->
-            <div class="mt-6 grid md:grid-cols-2 gap-6 text-xs text-slate-400">
-                <div>
-                    <h4 class="font-bold text-sm text-slate-200 mb-2 flex items-center"><i class="fas fa-info-circle mr-1.5 text-blue-400"></i> 如何取得試算表 CSV 網址？</h4>
-                    <ol class="list-decimal list-inside space-y-1.5 leading-relaxed">
-                        <li>在 Google Sheets 中建立如右側的 A 欄與 B 欄設定。</li>
-                        <li>點擊選單的 <span class="text-white">檔案 (File)</span> -> <span class="text-white">共用 (Share)</span> -> <span class="text-white">發布到網路</span>。</li>
-                        <li>在彈窗中選擇 <span class="text-white">「整份文件」</span>，格式選擇 <span class="text-white">「逗號分隔值 (.csv)」</span>。</li>
-                        <li>點擊發布並複製產生的網址貼到上方輸入框即可。</li>
-                    </ol>
-                </div>
-                <div>
-                    <h4 class="font-bold text-sm text-slate-200 mb-2 flex items-center"><i class="fas fa-copy mr-1.5 text-emerald-400"></i> Google Sheets 對照範本格式</h4>
-                    <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 max-h-40 overflow-y-auto font-mono text-slate-300 text-[10px] space-y-1">
-                        <div>whatsapp_number,85291234567</div>
-                        <div>price_amount,HKD $25</div>
-                        <div>brand_name,GradeA+</div>
-                        <div>hero_title_1,Assignment 驚個 AI 率太高？</div>
-                        <div>hero_title_2,交文前最後把關，專業代查 Turnitin</div>
-                        <div>hero_desc,不留痕跡，絕不錄入系統。支援中英文。</div>
-                        <div>whatsapp_msg,你好，我想查Assignment，一齊要AI份同查重份報告。</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 提示消息彈窗 -->
-    <div id="toast" class="fixed bottom-24 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white text-xs font-bold px-4 py-2.5 rounded-full shadow-lg opacity-0 transition-opacity duration-300 pointer-events-none z-50">
-        已成功儲存並載入設定！
-    </div>
-
-    <!-- ==================== 核心邏輯 ==================== -->
+    <!-- ==================== 核心動態數據對接邏輯 ==================== -->
     <script>
-        // 1. 本地預設值（當沒有設定 Google Sheets，或加載失敗時的 Fallback，確保 100% 能用、加載最快）
+        // 1. 本地預設值（當線上 Google Sheet 連接有延遲或出錯時，自動使用此預設值，確保 0.01 秒秒開）
         const defaultConfigs = {
             brand_name: "GradeA+",
             nav_badge: "大專生自查",
@@ -253,7 +171,7 @@
             badge_3: "中英文皆可辦理",
             section_title: "點解大專生都搵我哋？",
             card1_title: "安全不錄入 (No Repository)",
-            card1_desc: "使用教師高級帳戶查核，**絕不收錄**進資料庫。你正式交比學校果陣，絕對唔會變成 100% 重複。",
+            card1_desc: "使用教師高級帳戶查核，絕不收錄進資料庫。你正式交比學校果陣，絕對唔會變成 100% 重複。",
             card2_title: "最新 AI 偵測率",
             card2_desc: "除咗常規的 Similarity（抄襲率），仲會包含現時學校最睇重嘅 AI 寫作偵測（ChatGPT/Claude），附完整 PDF 標記報告。",
             card3_title: "特快 Deadline 救星",
@@ -272,27 +190,41 @@
             whatsapp_msg: "你好，我想查Assignment，一齊要AI份同查重份報告。"
         };
 
-        // 2. 初始化套用預設值 (極速加載，不留空白)
+        // 2. 初始化先載入預設值
         applyConfigs(defaultConfigs);
 
-        // 3. 嘗試讀取已儲存的 Google Sheets CSV 網址
-        const savedSheetsUrl = localStorage.getItem('google_sheets_csv_url');
-        if (savedSheetsUrl) {
-            document.getElementById('sheets-url-input').value = savedSheetsUrl;
-            fetchAndApplyGoogleSheets(savedSheetsUrl);
-        } else {
-            // 沒有設定網址時的狀態提示
-            updateStatusBar('local', '使用本機預設設定 (點擊右側進行自訂設定)');
+        // 3. 直接對接你專屬的 Google 試算表 CSV 輸出路徑
+        const spreadsheetId = "11jI1htFeG_vqF7kdnMHuPNL9ZUzxjnDItDUgoWtkCMU";
+        const googleSheetsCsvUrl = `https://docs.google.com/spreadsheets/d/${spreadsheetId}/pub?output=csv`;
+        
+        fetchAndApplyGoogleSheets(googleSheetsCsvUrl);
+
+        // 4. 動態獲取並同步 Google Sheet 的核心函數
+        async function fetchAndApplyGoogleSheets(url) {
+            try {
+                // 加入時間戳參數 (Cache Buster)，強迫每次獲取最新數據，避免瀏覽器緩存舊價格
+                const cacheBusterUrl = url + (url.includes('?') ? '&' : '?') + 't=' + new Date().getTime();
+                const response = await fetch(cacheBusterUrl);
+                if (!response.ok) throw new Error('Google Sheets fetch failed');
+                
+                const csvText = await response.text();
+                const parsedData = parseCSV(csvText);
+                
+                // 與本地默認 Fallback 合併，確保試算表即使漏掉某些 Key，頁面也不會報錯
+                const finalConfigs = { ...defaultConfigs, ...parsedData };
+                applyConfigs(finalConfigs);
+            } catch (error) {
+                console.error('Error syncing with Google Sheets, running on local fallback:', error);
+            }
         }
 
-        // 4. 解析 CSV 並套用到 DOM 的函數
+        // 5. 渲染全站數據與 WhatsApp 連結
         function applyConfigs(configs) {
-            // 更新普通文本內容
             Object.keys(configs).forEach(key => {
                 const elements = document.querySelectorAll(`[data-key="${key}"]`);
                 elements.forEach(el => {
-                    // 如果值包含 Markdown 風格的 ** 加粗，進行簡單的替換
                     let rawVal = configs[key];
+                    // 支援 Markdown 加粗格式 **
                     if (rawVal.includes('**')) {
                         rawVal = rawVal.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
                     }
@@ -300,7 +232,7 @@
                 });
             });
 
-            // 更新所有 WhatsApp 連結
+            // 實時更新全站所有 WhatsApp 連結 (包含頭尾按鈕、漂浮按鈕、大卡片按鈕)
             const waNumber = configs.whatsapp_number || "85291234567";
             const waMsg = configs.whatsapp_msg || "你好，我想查Assignment！";
             const waLinks = document.querySelectorAll('[data-wa-link]');
@@ -309,112 +241,23 @@
             });
         }
 
-        // 5. 拉取 Google Sheets 的 CSV 數據
-        async function fetchAndApplyGoogleSheets(url) {
-            updateStatusBar('loading', '正在連線至 Google Sheets...');
-            try {
-                // 為了解決快取問題，加入隨機變數
-                const cacheBusterUrl = url + (url.includes('?') ? '&' : '?') + 't=' + new Date().getTime();
-                const response = await fetch(cacheBusterUrl);
-                if (!response.ok) throw new Error('連線失敗');
-                
-                const csvText = await response.text();
-                const parsedData = parseCSV(csvText);
-                
-                // 合併本地預設和線上數據，確保線上缺少的 Key 能自動補足 fallback
-                const finalConfigs = { ...defaultConfigs, ...parsedData };
-                
-                applyConfigs(finalConfigs);
-                updateStatusBar('connected', '🟢 已成功實時同步 Google Sheets 設定');
-            } catch (error) {
-                console.error('Error fetching Google Sheets data:', error);
-                updateStatusBar('error', '🔴 線上設定讀取失敗，已自動載入本機預設文案');
-            }
-        }
-
-        // 6. 簡易高效的 CSV 解析器 (不依賴外部套件)
+        // 6. 輕量高效的 CSV 解析器
         function parseCSV(text) {
             const lines = text.split(/\r?\n/);
             const result = {};
             lines.forEach(line => {
-                // 找到第一個逗號作為分隔
                 const commaIdx = line.indexOf(',');
                 if (commaIdx !== -1) {
                     const key = line.substring(0, commaIdx).trim().replace(/^["']|["']$/g, '');
                     let value = line.substring(commaIdx + 1).trim();
-                    
-                    // 去除包圍的雙引號，並處理轉義引號
                     if (value.startsWith('"') && value.endsWith('"')) {
                         value = value.substring(1, value.length - 1);
                     }
                     value = value.replace(/""/g, '"');
-                    
-                    if (key) {
-                        result[key] = value;
-                    }
+                    if (key) result[key] = value;
                 }
             });
             return result;
-        }
-
-        // 7. 更新頂部狀態條 UI
-        function updateStatusBar(status, text) {
-            const bar = document.getElementById('status-bar');
-            const dot = document.getElementById('status-dot');
-            const txt = document.getElementById('status-text');
-
-            txt.textContent = text;
-            
-            if (status === 'loading') {
-                dot.className = "w-2.5 h-2.5 rounded-full bg-amber-500 mr-2 animate-pulse";
-                bar.className = "bg-slate-900 text-slate-400 text-xs py-2 px-4 border-b border-slate-800 transition-all duration-500";
-            } else if (status === 'connected') {
-                dot.className = "w-2.5 h-2.5 rounded-full bg-emerald-500 mr-2";
-                bar.className = "bg-emerald-950 text-emerald-300 text-xs py-2 px-4 border-b border-emerald-900 transition-all duration-500";
-            } else if (status === 'error') {
-                dot.className = "w-2.5 h-2.5 rounded-full bg-rose-500 mr-2";
-                bar.className = "bg-rose-950 text-rose-300 text-xs py-2 px-4 border-b border-rose-900 transition-all duration-500";
-            } else {
-                dot.className = "w-2.5 h-2.5 rounded-full bg-slate-500 mr-2";
-                bar.className = "bg-slate-900 text-slate-400 text-xs py-2 px-4 border-b border-slate-800 transition-all duration-500";
-            }
-        }
-
-        // 8. 儲存設定並套用
-        function saveAndApplyUrl() {
-            const urlInput = document.getElementById('sheets-url-input').value.trim();
-            if (urlInput) {
-                localStorage.setItem('google_sheets_csv_url', urlInput);
-                fetchAndApplyGoogleSheets(urlInput);
-                showToast("已成功儲存並同步設定！");
-                setTimeout(() => {
-                    toggleConfigGuide();
-                }, 1000);
-            } else {
-                localStorage.removeItem('google_sheets_csv_url');
-                applyConfigs(defaultConfigs);
-                updateStatusBar('local', '已清空自訂網址，使用本機預設');
-                showToast("已還原至預設設定");
-            }
-        }
-
-        // 9. UI 小功能 (抽屜滑出與 Toast)
-        function toggleConfigGuide() {
-            const guide = document.getElementById('config-guide');
-            if (guide.classList.contains('translate-y-full')) {
-                guide.classList.remove('translate-y-full');
-            } else {
-                guide.classList.add('translate-y-full');
-            }
-        }
-
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            toast.textContent = message;
-            toast.className = toast.className.replace('opacity-0', 'opacity-100');
-            setTimeout(() => {
-                toast.className = toast.className.replace('opacity-100', 'opacity-0');
-            }, 2500);
         }
     </script>
 </body>
