@@ -1,6 +1,6 @@
 # Uniaichecker | 香港大專生 Turnitin & AI 率專業代查服務平台
 
-歡迎來到 **Uniaichecker** 官方 GitHub 託管庫。本項目致力於為香港各大專院校學生（包括 HKU, CUHK, PolyU, CityU, HKBU, UST, HKU SPACE, CC 等）提供最安全、最特快的學術誠信前置把關服務。
+歡迎來到 **Uniaichecker** 官方 GitHub 託管庫。本項目致力於為香港各大專院校學生（包括 HKU, CUHK, PolyU, CityU, HKBU, UST, HKU SPACE, CC 等）提供最安全、最特快的學術誠信前置把關服務。
 
 👉 **官方網站直接進入：[https://www.uniaichecker.com](https://www.uniaichecker.com)**
 
